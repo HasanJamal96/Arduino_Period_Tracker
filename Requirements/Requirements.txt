@@ -1,0 +1,27 @@
+Arduino metro M4 and an Adafruit 2.8" TFT Touch Shield v2. 
+
+The idea is that you can select a start date and an end date from the logs to predict your next period.
+In addition, there would be a section where you can select 5 symptoms (a, b, c, d, e) that are related to that cycle.
+The last component would be an about the view which is just to explain briefly 
+what you can do (add, get prediction, track symptoms).
+
+For predictions, the idea is that you can predict the next period is 28 days after the first month 
+as there is no log yet but after that, you should be able to average out the length of days in the cycle between added periods.
+" Cycle One - 29 days, Cycle Two - 31 days, Cycle Three - 31 days, Cycle Four - 30 days.
+Add up the number of days, divide by 4 months, and you get an average of 30 days. 
+With that number, you can predict the first day of your next period when adding 30 days to the last.
+So, if my last period started on February 2, I add 30 days and come up with March 4 for the first day of my next period."
+this screenshot is how the UI should look generally, 
+we kept it simple. 
+(1) represents when the cycle start is selected,
+	and it shows the days since it has been started. 
+(2) represents when end is selected, 
+	so this view shows the days left until the next predicted period.
+	Period log is to show recent logs,
+	does not have to be all of them as it could become a memory issue but 
+	shows the last 4-5 months. 
+	Add symptoms takes you to select one of 5 buttons with the 
+		symptoms: (abdominal cramps, bloating, fatigue, tenderness, headache). 
+	
+	The About button should lead to a text only view of just a quick blurb: 
+		"Here you can add periods, track predictions, add symptoms and learn about your reproductive health."
